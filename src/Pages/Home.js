@@ -28,7 +28,7 @@ const Home = () => {
     e.preventDefault();
     console.log('Form data submitted:', formData);
     if (formData.name && formData.email && formData.description ){
-      axios.post('http://localhost:8000/add/', formData)
+      axios.post('http://3.17.164.174/add/', formData)
         .then(response => {
             console.log(response.data)
             setFormData({
