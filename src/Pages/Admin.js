@@ -14,7 +14,7 @@ const Admin = () => {
   // This useEffect contains a get request to the API to retreive all ticket data to render in admin portal.
   useEffect(() => {
     // GET request
-    axios.get('http://3.17.164.174/')
+    axios.get('http://18.221.23.167:8000/')
       .then(response => {
         console.log(response.data)
         setTicketData(response.data);
