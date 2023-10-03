@@ -30,20 +30,26 @@ const Admin = () => {
   }
 
   return (
-    <div className = "grid w-full h-full p-16 overflow-y-scroll">
-      <div className="grid grid-cols-5 gap-4 p-5 w-full font-bold bg-gray bg-opacity-50">
+    <div className = "grid w-full h-full p-2 sm:p-16 overflow-y-scroll">
+      <div className="grid grid-cols-5 gap-4 p-5 w-full text-xs sm:text-full font-bold bg-gray bg-opacity-50">
         <div className="col-span-1">Ticket ID</div>
-        <div className="col-span-1">Name</div>
-        <div className="col-span-1">Email</div>
-        <div className="col-span-1">Status</div>
+        <div className="col-span-3 text-start sm:hidden">Name/Email/Status</div>
+        <div className="col-span-1 hidden sm:block">Name</div>
+        <div className="col-span-1 hidden sm:block">Email</div>
+        <div className="col-span-1 hidden sm:block">Status</div>
       </div>
-      <div className="grid grid-cols-5 gap-4 p-5 w-full bg-gray bg-opacity-20">
+      <div className="grid grid-cols-5 justify-center items-center text-center gap-4 p-5 w-full text-xs sm:text-full bg-gray bg-opacity-20">
         {ticketData.map(ticket => (
           <React.Fragment key={ticket.id}>
             <div className="col-span-1 break-words">{ticket.id}</div>
-            <div className="col-span-1 break-words">{ticket.name}</div>
-            <div className="col-span-1 break-words">{ticket.email}</div>
-            <div className="col-span-1 break-words">{status[ticket.status]}</div>
+            <div className="grid grid-rows-3 text-start col-span-3 break-words sm:hidden">
+              <p>{ticket.name}</p>
+              <p>{ticket.email}</p>
+              <p>{ticket.status}</p>
+            </div>
+            <div className="col-span-1 break-words hidden sm:block">{ticket.name}</div>
+            <div className="col-span-1 break-words hidden sm:block">{ticket.email}</div>
+            <div className="col-span-1 break-words hidden sm:block">{status[ticket.status]}</div>
             <div className="col-span-1 break-words">
               <button onClick={() => viewDetails(ticket)} className="px-2 py-1 bg-gray-dark text-white rounded">Ticket Details</button>
             </div>
