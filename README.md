@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Help Desk Frontend Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the front-end application for the Help Desk system. This application is designed to facilitate the process of ticket submission for users and to provide an administrative interface for ticket management.
 
-## Available Scripts
+# Table of Contents
+  - Page Structure
+  - Dependencies
 
-In the project directory, you can run:
+# The application is divided into several main components:
 
-### `npm start`
+  1. App.js:
+     - Serves as the entry point to our application.
+     - Points directly to Nav.js which manages the navigation.
+  2. Nav.js:
+     - A basic navbar that provides links to different sections of the application.
+     - Houses the routes (via react-router-dom) to direct the user to the appropriate pages.
+  3. Home.js:
+     - This is where users can submit their tickets.
+     - Designed with a user-friendly interface for ease of use.
+  4. Admin.js:
+     - A dashboard for the admin to view a table of all open tickets.
+     - Provides an overview of ongoing tickets and their statuses.
+  5. userDetails.js:
+     - A detailed view of a specific ticket.
+     - Admins can use this page to view ticket details, respond to the user, update ticket status, or delete the ticket altogether.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Dependencies
+  - Axios: Used for making HTTP requests to the backend API.
+  - react-router-dom: Enables routing capabilities within the React application, allowing for seamless navigation between pages.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Future Add-ons
 
-### `npm test`
+As the front end evolves, there are several improvements and new features that can be incorporated to enhance both security and functionality. Two honorable mentions are the following:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Admin Authentication:
+  - A secure login mechanism for the admin.
+  - Ensuring only authorized personnel can access the admin panel.
+  - Rerouting to the login page if an unauthorized user attempts to access admin-specific pages.
 
-### `npm run build`
+2. User Dashboard & Login:
+  - A dedicated portal for users post-login where they can:
+  - View the status of all their current tickets.
+  - Access archives of past tickets.
+  - Engage in direct conversation with the admin team regarding their tickets, fostering clearer communication.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+These enhancements aim to provide a more personalized and secure experience for both the users and the admin.
