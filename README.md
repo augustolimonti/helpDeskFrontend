@@ -27,6 +27,7 @@ Welcome to the front-end application for the Help Desk system. This application 
 # Dependencies
   - Axios: Used for making HTTP requests to the backend API.
   - react-router-dom: Enables routing capabilities within the React application, allowing for seamless navigation between pages.
+  - Tailwind CSS - The front end was styled using Tailwind CSS, a utility-first CSS framework for rapidly building custom designs.
 
 # Future Add-ons
 
