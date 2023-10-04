@@ -27,7 +27,7 @@ const UserDetails = () => {
   useEffect(() => {
     var urlParts = currentURL.split("/");
     var ticketID = parseInt(urlParts[urlParts.length - 1]);
-    axios.get('http://18.221.23.167:8000/')
+    axios.get('https://18.221.23.167/')
       .then(response => {
         const userTicket = response.data.filter((ticket) => ticket.id === ticketID)
         console.log(userTicket[0])
@@ -53,7 +53,7 @@ const UserDetails = () => {
   };
   // This function calls the the delete function in the api to delete the ticket completely.
   const handleDelete = (ticketId) => {
-    axios.delete(`http://18.221.23.167:8000/delete/${ticketId}/`)
+    axios.delete(`https://18.221.23.167/delete/${ticketId}/`)
       .then(response => {
         console.log('Ticket deleted successfully');
         window.alert('Ticket has been deleted!');
@@ -69,7 +69,7 @@ const UserDetails = () => {
   // This function calls the api to the update the status of the ticket based on the user selection.
   const handleStatusUpdate = (ticketId, newStatus) => {
     // console.log(ticketId, newStatus)
-    const url = `http://18.221.23.167:8000/update_status/${ticketId}/`;
+    const url = `https://18.221.23.167/update_status/${ticketId}/`;
     const data = {
        status: newStatus
      };
